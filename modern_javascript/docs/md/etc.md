@@ -119,9 +119,7 @@ undefined는 값이 할당되지 않은 변수의 초기값을 위해 예약어�
 
 ---
 
-## alert, prompt, confirm
-
-<br>
+## ❒ alert, prompt, confirm
 
 ### ↘︎ alert
 메시지를 보여준다.
@@ -145,7 +143,31 @@ undefined는 값이 할당되지 않은 변수의 초기값을 위해 예약어�
 <br>
 
 ## ❒ 단항 연산자 + - 와 숫자형으로의 변환
+
+### 예시1
 <img src="https://user-images.githubusercontent.com/85930183/236407293-83f62b6b-ae5e-446a-b3f1-62685d2f2999.png" width="90%">
+
+<br>
+
+### 예시2
+밑에 예시의 변수 a 는 문자열이다. 그래서 switch 문에서 + 를 붙여서 숫자형으로 바꿔줘야 case 에 들어가게 된다.
+
+하지만 그냥 a 를 넣게 되면 case 에 들어가지 않고, default 가 실행된다.
+```
+let a = "1";
+let b = 0;
+
+switch (+a) {
+  case b + 1:
+    alert("표현식 +a는 1, 표현식 b+1는 1이므로 이 코드가 실행됩니다.");
+    break;
+
+  default:
+    alert("이 코드는 실행되지 않습니다.");
+}
+```
+<img src="https://user-images.githubusercontent.com/85930183/236604353-4d6ab3d1-04b5-4cf1-8cc8-105d6a22b87a.png" width="90%">
+
 
 <br>
 

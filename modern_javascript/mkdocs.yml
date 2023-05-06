@@ -1,0 +1,13 @@
+site_name: My Docs
+theme: readthedocs
+extra:
+  static_dirs:
+    - docs/md
+    
+nav:
+  - 'JavaScript?': md/1_intro.md
+  - 'Script?': md/2_script.md
+  - 'Data Type': md/3_type.md
+  - 'Nullish': md/4_nullish.md
+  - 'Contents': md/etc.md
+  # - 'Allowed Functions': quize.md
