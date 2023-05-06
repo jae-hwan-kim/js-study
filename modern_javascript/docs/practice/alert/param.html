@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// 1. || 와 ?? 테스트 -------------------------------------------------------------
+/*
+function showMessage(text) {
+  // 첫 번째로 값이 true 인 것을 반환. 0 을 false 로 인식
+  alert(text || 'no text given'); // no text given
+
+  // 첫 번째로 값이 있는 것을 반환. 0 을 숫자로 인식
+  alert(text ?? 'no text given'); // 0
+}
+
+showMessage(0);
+*/
+
+
+// 2. 인자 유무 테스트 -------------------------------------------------------------
+function anotherFunction() {
+    console.log("anotherFunction() is called");
+}
+
+function showMessage(from, text = anotherFunction()) {
+    console.log(text);
+}
+
+showMessage("Ann");          // anotherFunction() is called
+showMessage("Ann", "Hi");    // Hi
+
+</script>
+</body>
+</html>

@@ -224,3 +224,107 @@ console.log( undefined === null ); // false
 console.log( !!"non-empty string" ); // true
 console.log( !!null ); // false
 ```
+
+<br>
+
+---
+
+## ❒ 인수 유무에 따른 매개 변수 값 할당 차이
+
+다음은 showMessage 함수이다.
+
+```js
+function showMessage(from, text = anotherFunction()) {
+  // anotherFunction()은 text값이 없을 때만 호출됨
+  // anotherFunction()의 반환 값이 text의 값이 됨
+}
+```
+
+showMessage 함수에 인자를 어떻게 넣느냐에 따라 할당되는 값이 달라진다.
+```js
+// 1. 두 번째 인자가 없을 경우, showMessage 의 text 매개 변수는 anotherFunction() 의 반환값을 할당한다.
+showMessage("Ann");
+
+// 2. 두 번째 인자가 있을 경우, showMessage 의 text 매개 변수는 "Hi" 를 할당한다.
+showMessage("Ann", "Hi");
+
+```
+
+### ❓ 궁금한 것...
+테스트를 통해 인자의 유무에 따른 console 값을 확인했다. 그런데 의문이 드는건 `undefiend 가 왜 호출되는 것일까?` 이다.
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    
+function anotherFunction() {
+    console.log("anotherFunction() is called");
+}
+
+function showMessage(from, text = anotherFunction()) {
+    console.log(text);
+}
+
+showMessage("Ann");
+showMessage("Ann", "Hi");
+
+</script>
+</body>
+</html>
+```
+도대체 왜❓❗️❓❗️❓❗️❓❗️❓❗️❓
+<img src="https://user-images.githubusercontent.com/85930183/236607577-3fb7e855-ad3e-4740-8f93-02d695ea1fcc.png" width="90%">
+
+### ☝🏻 옛날 방식에서 매개 변수 기본값 설정 방법
+오... 이 방식은 굉장히 익숙하다ㅋㅋㅋ C 와 C++ 의 방식이 아니던가?!
+
+```js
+// 1.
+function showMessage(from, text) {
+  if (text === undefined) {
+    text = 'no text given';
+  }
+
+  alert( from + ": " + text );
+}
+```
+
+이 방식은 참신했다. false 값을 반환하는 `||` 연산을 활용할 생각을 하다니, 대단스...!
+```js
+// 2.
+function showMessage(from, text) {
+  // text의 값이 falsy면 기본값이 할당됨
+  // 이 방식은 text == ""일 경우, text에 값이 전달되지 않은것과 같다고 간주한다..
+  text = text || 'no text given';
+  ...
+}
+```
+
+### ☝🏻 || 과 ?? 을 사용하는 방법
+
+만약 text 에 숫자 0을 넘기고 싶을 때는 `??` 을 사용해야한다. `||` 는 0 을 `false` 로 인식하기 때문이다.
+
+```js
+function showMessage(text) {
+  // 첫 번째로 값이 true 인 것을 반환. 0 을 false 로 인식
+  alert(text || 'no text given'); // no text given
+
+  // 첫 번째로 값이 있는 것을 반환. 0 을 숫자로 인식
+  alert(text ?? 'no text given'); // 0
+}
+
+showMessage(0);
+```
+
+<br>
+
+---
+
+
