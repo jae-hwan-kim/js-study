@@ -138,3 +138,59 @@ alert( arr[3] ); // undefined: 삭제된 기존 요소들이 복구되지 않습
 
 #### ❗️ 주의 사항
 * sort, reverse, splice는 기존 배열을 변형시킨다.
+
+---
+
+## ❒ 맵
+
+맵은 키가 있는 값이 저장된 컬렉션이다.
+
+### ▪︎ 주요 메서드와 프로퍼티
+* new Map([iterable]) <br>
+  맵을 만듭니다. [key,value]쌍이 있는 iterable(예: 배열)을 선택적으로 넘길 수 있는데, 이때 넘긴 이터러블 객체는 맵 초기화에 사용된다.
+  <img src="https://github.com/JaeHwan-s-WebServeClass/webserver-nginx/assets/85930183/aa496c8c-9c6a-4f14-bfdd-92b3a6ac2a3c" width="90%">
+
+
+* map.set(key, value) <br>
+  키를 이용해 값을 저장
+
+* map.get(key) <br>
+  키에 해당하는 값을 반환합니다. key가 존재하지 않으면 undefined를 반환
+
+* map.has(key) <br>
+  키가 있으면 true, 없으면 false를 반환합니다.
+
+* map.delete(key) <br>
+  키에 해당하는 값을 삭제합니다.
+
+* map.clear() <br>
+  맵 안의 모든 요소를 제거합니다.
+
+* map.size <br>
+  요소의 개수를 반환합니다.
+
+---
+
+## ❒ 셋
+
+셋은 중복이 없는 값을 저장할 때 쓰이는 컬렉션이다.
+
+### ▪︎ 주요 메서드와 프로퍼티
+
+* new Set([iterable]) <br>
+  셋을 만든다. iterable 객체를 선택적으로 전달받을 수 있는데(대개 배열을 전달받음), 이터러블 객체 안의 요소는 셋을 초기화하는데 쓰인다.
+
+* set.add(value) <br>
+  값을 추가하고 셋 자신을 반환한다. 셋 내에 이미 value가 있는 경우 아무런 작업을 하지 않는다.
+
+* set.delete(value) <br>
+  값을 제거한다. 호출 시점에 셋 내에 값이 있어서 제거에 성공하면 true, 아니면 false를 반환한다.
+
+* set.has(value) <br>
+  셋 내에 값이 존재하면 true, 아니면 false를 반환한다.
+
+* set.clear() <br>
+  셋을 비운다.
+
+* set.size <br>
+  셋에 몇 개의 값이 있는지 센다.

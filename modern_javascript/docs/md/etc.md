@@ -372,3 +372,59 @@ showMessage(0);
 
 ---
 
+## ❒ iterator
+
+기본적으로 객체는 배열처럼 요소 반복이 불가능하다. 그래서 `for .. of` 를 사용할 수 없다.
+하지만 이터러블이라는 개념을 사용하면 어떤 객체에든 `for .. of` 반복문을 적용할 수 있다. `for .. of` 가능한 객체를 이터러블이라고 한다.
+
+이터러블엔 Symbol.itreator 메서드가 반드시 구현되어있어야 한다.
+
+```js
+let range = {
+  from: 1,
+  to: 5
+};
+
+// 1. for..of 최초 호출 시, Symbol.iterator가 호출
+range[Symbol.iterator] = function() {
+
+  // Symbol.iterator는 이터레이터 객체를 반환
+  // 2. 이후 for..of는 반환된 이터레이터 객체만을 대상으로 동작하는데, 이때 다음 값도 정함
+  return {
+    current: this.from,
+    last: this.to,
+
+    // 3. for..of 반복문에 의해 반복마다 next()가 호출함.
+    next() {
+      // 4. next()는 값을 객체 {done:.., value :...}형태로 반환해야 함
+      if (this.current <= this.last) {
+        return { done: false, value: this.current++ };
+      } else {
+        return { done: true };
+      }
+    }
+  };
+};
+
+// 이제 의도한 대로 동작함
+for (let num of range) {
+  alert(num); // 1, then 2, 3, 4, 5
+}
+```
+
+이터레이터를 명시적으로 호출할 수 있다.
+
+```js
+let str = "Hello";
+
+// for..of를 사용한 것과 동일한 작업을 합니다.
+// for (let char of str) alert(char);
+
+let iterator = str[Symbol.iterator]();
+
+while (true) {
+  let result = iterator.next();
+  if (result.done) break;
+  alert(result.value); // 글자가 하나씩 출력됩니다.
+}
+```
