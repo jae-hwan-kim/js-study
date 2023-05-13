@@ -194,3 +194,49 @@ alert( arr[3] ); // undefined: 삭제된 기존 요소들이 복구되지 않습
 
 * set.size <br>
   셋에 몇 개의 값이 있는지 센다.
+
+---
+## ❒ 위크맵 (weak map) 과 위크셋 (weak set)
+
+자바스크립트 엔진은 가비지 컬렉션을 통해 사용 가능성이 있는 값은 메모리에 유지하고, 그렇지 않으면 삭제한다.
+
+Map 에 어떤 데이터를 넣고, 해당 데이터를 `null` 로 할 경우, 가비지 컬렉션이 어떻게 판단할까?
+
+Map 에 들어간 데이터에 접근할 경우 값이 유지된다. (그냥 데이터에 접근하면 null 이다.)
+
+배열을 예시로 보자.
+
+<img src="https://github.com/JaeHwan-s-WebServeClass/webserver-nginx/assets/85930183/522ce7aa-1cab-478e-a42e-1b0aa280f9b0"  width="90%">
+
+<br>
+
+---
+
+그렇다면 삭제하기 위해 어떻게 해야할까? 가비지 컬렉터에의해 삭제하기 위해서는 위크맵을 사용하면 된다.
+
+예시
+
+<img src="https://github.com/JaeHwan-s-WebServeClass/webserver-nginx/assets/85930183/0f737714-b767-4481-82d9-f2c4108996da" width="90%">
+
+
+
+<img src="https://github.com/JaeHwan-s-WebServeClass/webserver-nginx/assets/85930183/a862f45f-c072-45b7-a5b2-dce566b58963" width="90%">
+
+### ▪︎ 주요 메서드와 프로퍼티
+
+* weakMap.get(key)
+
+* weakMap.set(key, value)
+
+* weakMap.delete(key)
+
+* weakMap.has(key)
+
+메스드가 매우 적다. 가비지 컬렉션이 일어나는 시점은 자바스크립트 엔진이 결정한다. 객체는 모든 참조를 잃었을 때, 그 즉시 메모리에서 삭제될 수도 있고, 다른 삭제 작업이 있을 때까지 대기하다가 함께 삭제될 수도 있다. 현재 위크맵에 요소가 몇 개 있는지 정확히 파악하는 것 자체가 불가능하다. 가비지 컬렉터가 한 번에 메모리를 청소할 수도 있고, 부분 부분 메모리를 청소할 수도 있다. 그래서 위크맵의 요소(키/값) 전체를 대상으로 무언가를 하는 메서드는 동작 자체가 불가능하다.
+
+### ▪︎ 위크맵과 위크셋은 어디서 사용하는가?
+
+#### ↘︎ 추가와 캐싱데이터
+
+이 부분은 아직 잘 이해하지 못했다.
+https://ko.javascript.info/weakmap-weakset
