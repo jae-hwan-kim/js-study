@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Data Type - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data Type";
+        var mkdocs_page_input_path = "md/3_type.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../1_intro/">JavaScript?</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_script/">Script?</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Data Type</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">숫자형</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bigint">bigint</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">문자형</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">불린형</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#null">null</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#undefined">undefined</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">객체형</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">심볼형</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#typeof">typeof</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_nullish/">Nullish</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../etc/">Contents</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Data Type</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">자료형</h1>
+<p>자바스크립트에는 여덟 가지 기본 자료형이 있습니다.</p>
+<h2 id="_2">숫자형</h2>
+<p>정수, 부동 소수점 숫자 등의 숫자를 나타낼 때 사용합니다. 정수의 한계는 ±253 입니다.</p>
+<h2 id="bigint">bigint</h2>
+<p>길이 제약 없이 정수를 나타낼 수 있습니다.</p>
+<h2 id="_3">문자형</h2>
+<p>빈 문자열이나 글자들로 이뤄진 문자열을 나타낼 때 사용합니다. 단일 문자를 나타내는 별도의 자료형은 없습니다.</p>
+<h2 id="_4">불린형</h2>
+<p>true, false를 나타낼 때 사용합니다.</p>
+<h2 id="null">null</h2>
+<p>null 값만을 위한 독립 자료형입니다. null은 알 수 없는 값을 나타냅니다.</p>
+<h2 id="undefined">undefined</h2>
+<p>undefined 값만을 위한 독립 자료형입니다. undefined는 할당되지 않은 값을 나타냅니다.</p>
+<h2 id="_5">객체형</h2>
+<p>복잡한 데이터 구조를 표현할 때 사용합니다.</p>
+<h2 id="_6">심볼형</h2>
+<p>객체의 고유 식별자를 만들 때 사용합니다.</p>
+<h2 id="typeof">typeof</h2>
+<p>연산자는 피연산자의 자료형을 알려줍니다.</p>
+<p>typeof x 또는 typeof(x) 형태로 사용합니다.
+피연산자의 자료형을 문자열 형태로 반환합니다.
+null의 typeof 연산은 "object"인데, 이는 언어상 오류입니다. null은 객체가 아닙니다.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../2_script/" class="btn btn-neutral float-left" title="Script?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../4_nullish/" class="btn btn-neutral float-right" title="Nullish">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../2_script/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../4_nullish/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

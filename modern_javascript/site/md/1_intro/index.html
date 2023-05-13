@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>JavaScript? - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "JavaScript?";
+        var mkdocs_page_input_path = "md/1_intro.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">JavaScript?</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">자바스크립트란?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">자바스크립트 엔진?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">자바스크립트 엔진 작동 원리</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">자바스크립트 강점</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">자바스크립트로 컴파일 되어 사용되는 언어들</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">명세서</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">메뉴얼</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_9">호환성</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../2_script/">Script?</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../3_type/">Data Type</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../4_nullish/">Nullish</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../etc/">Contents</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>JavaScript?</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">자바스크립트</h1>
+<h2 id="_2">자바스크립트란?</h2>
+<p>생동감을 불어넣기 위해 만들어진 언어이다. 자바스크립트로 만들어진 프로그램을 스크립트라고 부른다. 이 언어는 클라이언트와 서버 모두에서 사용될 수 있다. 클라이언트에서 사용될 때, 즉 브라우저에서 사용될 때는 엔진이 필요하다. </p>
+<h2 id="_3">자바스크립트 엔진?</h2>
+<p>브라우저에 자바스크립트 가상 머신과 엔진이 있다. 스크립트는 엔진을 거쳐서 브라우저에 실행된다. 다양한 엔진 코드가 있는데 대표적인 2가지는 <code>V8</code> 과 <code>SpiderMonkey</code> 가 있다.</p>
+<h3 id="_4">자바스크립트 엔진 작동 원리</h3>
+<ol>
+<li>엔진이 스크립트를 읽는다. (파싱)</li>
+<li>읽어 들인 스크립트를 기계어로 전환한다. (컴파일)</li>
+<li>전환한 코드를 실행한다.</li>
+</ol>
+<h2 id="_5">자바스크립트 강점</h2>
+<ol>
+<li>HTML/CSS 와 통합하여 사용할 수 있다.</li>
+<li>모든 주요 브라우저에서 지원하며 기본 언어로 사용한다.</li>
+</ol>
+<h2 id="_6">자바스크립트로 컴파일 되어 사용되는 언어들</h2>
+<p>자바스크립트는 모든 사용자들의 요구사항을 만족할 수 없다. 그래서 새로운 언어들이 많이 생겼다. 이 언어들은 자바스크립트로 컴파일되는 과정이 있어야 실행된다. 대표적인 예시는 다음과 같다.</p>
+<ul>
+<li>TypeScript</li>
+<li>Dart</li>
+<li>Flow</li>
+<li>CoffeeScript</li>
+</ul>
+<p>이 외에도 자바스크립트로 '트랜스파일’할 수 있는 언어는 많다. 각 언어마다 고유한 기능을 제공한다. 이러한 면에서 웹 개발을 한다면 자바스크립트에 대한 지식은 필수라고 할 수 있다.</p>
+<h2 id="_7">명세서</h2>
+<p>JS 에 익숙해지면 더욱 자세한 자세한 정보가 필요할 수 있다. 아래를 참고하자.</p>
+<ul>
+<li>
+<p>ECMA-262 명세서 <br>
+https://www.ecma-international.org/publications-and-standards/standards/ecma-262/</p>
+</li>
+<li>
+<p>ECMA-262 공식 버전 초안 <br>
+https://tc39.es/ecma262/</p>
+</li>
+<li>
+<p>명세서에 등록된 기능 또는 등록될 기능 <br>
+https://github.com/tc39/proposals</p>
+</li>
+</ul>
+<h2 id="_8">메뉴얼</h2>
+<p>궁금한게 생겼을 때는 검색 엔진이나 chatGPT 를 사용하자.
+* 구글 검색 엔진을 사용할 때는 [ MDN + 궁금한 것 ] 의 형태로 검색하자
+* chatGPT 는... 말해뭐해~~</p>
+<h2 id="_9">호환성</h2>
+<p>자바스크립트는 자바스크립트 엔진이 있는 브라우저에서 작동하고, 브라우저마다 갖고 있는 엔진이 다르다.</p>
+<p>엔진에 따라 사용이 가능하거나 제약이 있는 자바스크립트 기능이 있을 수 있다. 이때는 다음 사이트에서 확인하자.</p>
+<ul>
+<li>
+<p>브라우저가 특정 기능을 지원하는지 확인
+https://caniuse.com/</p>
+</li>
+<li>
+<p>암호화 관련 기능 cryptography 사용 가능 여부
+https://caniuse.com/cryptography</p>
+</li>
+<li>
+<p>기능에 대한 엔진
+https://kangax.github.io/compat-table/es6/</p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../2_script/" class="btn btn-neutral float-right" title="Script?">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="../2_script/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
