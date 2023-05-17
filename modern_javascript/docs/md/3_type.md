@@ -28,6 +28,31 @@ john.sayHi(); // 친구야 반갑다!
 
 <br>
 
+### ☝🏻 접근 방식
+객체는 요소에 접근할 때 map, set, array 처럼 반복자를 사용하지 못한다. map, set, array 등은 다음과 같은 메서드를 사용하여 접근한다.
+
+```js
+keys()
+values()
+entries()
+```
+
+객체에 접근하기 위해서는 다음과 같은 메서드를 사용할 수 있다.
+
+```js
+Object.keys(obj)
+Object.values(obj)
+Object.entries(obj)
+```
+<img src="https://github.com/JaeHwan-s-WebServeClass/webserver-nginx/assets/85930183/e983d712-c0e1-4793-a220-67a6f8008ee2"  width="90%">
+
+그런데 객체도 배열 전용 메서드를 사용할 수 있다. 바로 `Object.entries와 Object.fromEntries`를 순차적으로 적용하면 된다.\
+
+<img src="https://github.com/JaeHwan-s-WebServeClass/webserver-nginx/assets/85930183/a04866e8-2e59-4725-8881-1f0f0676e3cf" width="90%">
+
+
+<br>
+
 ### ☝🏻 원시값을 객체처람 사용하기?
 원시값에 메서드를 활용할 수 있게 하기 위해 **`원시 래퍼 객체 (object wrapper)`**를 만들었다.
 
